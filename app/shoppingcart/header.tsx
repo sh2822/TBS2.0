@@ -6,7 +6,7 @@ export default function Header() {
     <div className={styles.wrapperheadfoot}>
       <div className={styles.header}>
       <p className={styles.title}>SHOPPING CART</p>
-        <button className={styles.cart}><MdOutlineShoppingCart /></button>
+        <button className={styles.cart}><MdOutlineShoppingCart /></button> 
       </div>
     </div>
   )
