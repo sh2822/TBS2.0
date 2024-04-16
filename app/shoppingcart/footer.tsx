@@ -10,7 +10,7 @@ export default function Footer() {
       <div className={styles.footer}>
         <div className={styles.disclaimer}>
         <p className={`${styles.disclaimertext} ${styles.alert}`}> <IoAlertCircleOutline color="rgba(208, 111, 26, 1)" /> </p>
-        <p className={`${styles.disclaimertext} ${styles.textbold}`}>We refresh inventory number hourly. staff will let you know if there is any discrepancy</p>
+        <p className={`${styles.disclaimertext} ${styles.textbolddis}`}>We refresh inventory number hourly. staff will let you know if there is any discrepancy</p>
         <p className={styles.cancel}><RxCross2 color="rgba(208, 111, 26, 1)"/>
         </p>
         </div>

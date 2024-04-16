@@ -1,5 +1,6 @@
 .wrapperheadfoot{
     display: flex;
+    /* position: fixed; */
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -23,7 +24,8 @@
 
 .footer{
     width: 100%;
-    /* position: fixed; */
+    position: fixed;
+    bottom: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +42,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    padding: 10px 10px 20px;
+    padding: 5px 20px 20px 10px;
  }
 
  .title{
@@ -58,12 +60,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 10px;
+    padding-top: 50px;
+    padding-bottom: 5px;
  }
  
  .buttontag{
     background: rgba(244, 178, 51, 1);
-    padding: 3px 10px 3px 10px;
+    padding: 6px 10px 6px 10px;
     border-radius: 5px;
     font-family: sans-serif;
     font-size: 13px;
@@ -117,6 +120,18 @@
     text-align: left;
  }
 
+ .textbolddis{
+  width: 65px;
+  height: 29px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 48.8px;
+  text-align: left;
+}
+
  .text1{
     display: grid;
     font-family: sans-serif;
@@ -153,8 +168,20 @@
     color: rgba(176, 46, 47, 1);
  }
 
+ .textboldice{
+  width: 65px;
+  height: 29px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 28.8px;
+  text-align: left;
+}
+
 .main{
-    display: flex;  
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -166,11 +193,8 @@
 }
 
 .submain{
-    /* height: 200px;
-    overflow: auto; */
-    margin-top: 30px;
     width: 100%;
-    padding: 30px 0px 0px 0px;
+    padding: 25px 0px 0px 0px;
     background: rgba(244, 244, 244, 1);
 }
 
@@ -181,12 +205,16 @@
 }
 
 .divt1{
-    height: 200px;
-    overflow: auto;
+  max-width: 100%;
+  height: 200px;
+  overflow-x: auto;
+  overflow-y: scroll;
 }
 
 .table{
+
     width: 100%;
+    table-layout: auto ;
     background-color: white;
     border-radius: 5px;
 }
@@ -199,12 +227,12 @@
 }
 
 .cell{
-    border: 1px solid rgb(177, 174, 170);
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
-    padding: 10px 20px 10px 20px;
+  border: 1px solid rgb(177, 174, 170);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 10px 20px 10px 20px;
 }
 
 .ptag{
@@ -217,16 +245,17 @@
 }
 
 .circletag{
-    margin-top: 5px;
-    margin-right: 2px;
-    font-size: x-small;
+    padding-top: 5px;
+    padding-right: 4px;
+    font-size: medium;
     color: rgba(208, 111, 26, 1);
 }
 
 .circletag1{
-    margin-top: 4px;
-    margin-right: 2px;
-    font-size: x-small;
+    padding-top: 5px;
+    padding-right: 2px;
+    font-size: small;
+    align-items:left;
 }
 
 .left {
@@ -253,29 +282,34 @@
 
 .disclaimer{
     display: flex;
+    flex-direction: row;
+    justify-content: left;
+    /* align-items: center; */
     background-color: rgba(253, 243, 224, 1);
     width: 100%;
     height: 100%;
 }
 
 .disclaimertext{
-    display: contents;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    /* align-items: center; */
     color: black;
 }
 
 .alert{
     display: flex;
     align-items: center;
-    margin-left: 10px;
-    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
 }
 
 .cancel{
     display: flex;
     align-items: center;
-    margin-left: auto;
-    margin-right: 10px;
+    font-size: small;
 }
 
 .divminusplus{
@@ -288,7 +322,7 @@
     /* display: inline; */
     background-color: rgba(255, 255, 255, 1);
     cursor: pointer;
-    padding: 6px;
+    padding: 2px 5px 2px 5px;
     text-align: center;
     margin: 3px;
 }
@@ -316,15 +350,14 @@
 
  /* Add this CSS at the end of your existing CSS */
 
-@media only screen and (max-width: 768px) {
+ @media only screen and (max-width: 768px) {
     .main {
       padding: 20px;
-      height: 81vh;
     }
   
     .button {
       flex-direction: row;
-      /* align-items: center; */
+      align-items: center;
     }
   
     .button button {
@@ -356,12 +389,12 @@
   @media only screen and (max-width: 1024px) {
     .main {
       padding: 20px;
-      height: 87vh;
+      height: 100%;
     }
   
     .button {
       flex-direction: row;
-      /* align-items: center; */
+      align-items: center;
     }
   
     .button button {
@@ -399,7 +432,7 @@
     .button {
       flex-direction: row;
       margin-top: 30px;
-      /* align-items: center; */
+      align-items: center;
     }
   
     .button button {
@@ -429,22 +462,150 @@
   }
 
   @media only screen and (max-width: 480px) {
+
+    .header, .footer{
+      font-size: small;
+    }
+
     .main {
-      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0px;
+      width: 100%;
+    }
+
+    .submain{
+      display: flex;
+      flex-direction: column;
+      flex-basis: 40%;
+      height: 400px;
+      padding: 0px 15px 0px 15px;
+    }
+
+    .divt1{
+      height: 2px;
+    }
+
+    .submain2{
+      position: absolute;
+      bottom: 0;
+      padding: 0px 29px 50px 29px ;
+    }
+
+    .cell{
+      flex-direction: row;
+      justify-content: flex-start;
+      word-break: break-word;
+      padding: 10px;
     }
   
     .button {
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
+      font-size: small;
     }
   
     .button button {
-      margin-bottom: 5px;
+      margin-bottom: 2px;
     }
   
     .table {
+      /* display: flex;
+      flex-direction: row; */
       overflow-x: auto;
       font-size: 12px;
     }
-  }
+
+    .textbold{
+      width: 65px;
+      height: 29px;
+      gap: 0px;
+      opacity: 0px;
+      font-family: sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 15.8px;
+      text-align: left;
+   }
   
+   .text1{
+      display: grid;
+      font-family: sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+   }
+  
+   .text2{
+      height: 29px;
+      gap: 0px;
+      opacity: 0px;
+      font-family: sans-serif;
+      font-size: 8px;
+      font-weight: 50;
+      text-align: left; 
+   }
+  
+   .text3{
+      display: grid;
+      font-family: sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      text-decoration: line-through;
+   }
+  
+   .text4{
+      height: 29px;
+      gap: 0px;
+      opacity: 0px;
+      font-family: sans-serif;
+      font-size: 8px;
+      font-weight: 600;
+      text-align: left; 
+      color: rgba(176, 46, 47, 1);
+   }
+
+   .spanborder{
+    display: flex;
+   }
+
+   .textboldice{
+    width: 65px;
+    height: 2px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 15.8px;
+    text-align: left;
+ }
+
+ .button2{
+  font-size: x-small;
+  padding: 3px 10px 3px 10px;
+ }
+
+ .text{
+  font-size: 10px;
+ }
+
+ .textbolddis, .alert, .cancel{
+  font-size: x-small;
+  line-height: 15px;
+  padding-top: 9px;
+  padding-bottom:5px;
+ }
+
+ .buttonExpand{
+  font-size: x-small; 
+}  
+
+.buttontag{
+  font-size: x-small;
+}
+
+.footerbutton{
+  padding: 5px 20px 10px 20px;
+}
+}
